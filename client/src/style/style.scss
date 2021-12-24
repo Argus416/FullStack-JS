@@ -7,6 +7,23 @@
     cursor: pointer;
 }
 
+.delete-btn {
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: crimson;
+    &:focus {
+        background: none;
+        opacity: 0.7;
+    }
+    &:hover {
+        opacity: 0.9;
+    }
+    .material-icons {
+        font-size: 2.3em;
+    }
+}
+
 .loader-container {
     display: flex;
     align-items: center;
@@ -33,14 +50,25 @@
 
 #comments {
     .comments-container {
-        .username {
-            text-transform: capitalize;
-            font-weight: bold;
-        }
         .comment {
             display: flex;
             align-items: center;
             margin-bottom: 12px;
+            .right {
+                width: 100%;
+            }
+            .comment-header-container {
+                display: flex;
+                justify-content: space-between;
+                .username {
+                    text-transform: capitalize;
+                    font-weight: bold;
+                    display: inline-block;
+                }
+                .material-icons {
+                    display: inline-block;
+                }
+            }
         }
     }
 }

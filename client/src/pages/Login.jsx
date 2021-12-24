@@ -27,7 +27,7 @@ const Login = () => {
                     const err = response.data.error;
                     alert(err);
                 } else {
-                    localStorage.setItem("accessToken", response.data);
+                    localStorage.setItem("accessToken", response.data.accessToken);
                     console.log(response.data);
                     setAuthState({ isLoggedin: true, username: response.data.username });
                     navigate("/");
